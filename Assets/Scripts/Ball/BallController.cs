@@ -1,15 +1,27 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using Sound;
 using UnityEngine;
+using DG.Tweening;
 
-public class BallController : MonoBehaviour
+namespace Ball
 {
-    [SerializeField] private AudioClip ballTouchSound;
-    [SerializeField] private SoundManager soundManager;
-    
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class BallController : MonoBehaviour
     {
-        soundManager.Play(ballTouchSound);
+        [SerializeField] private AudioClip ballTouchSound;
+        [SerializeField] private SoundManager soundManager;
+        [SerializeField] private GameState gameState;
+        
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            soundManager.Play(ballTouchSound);
+        }
+
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag("DeathZone"))
+            {
+                gameState.LoseGame();
+            }
+        }
     }
 }

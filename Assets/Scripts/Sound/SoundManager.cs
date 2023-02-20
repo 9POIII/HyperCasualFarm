@@ -1,21 +1,21 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+namespace Sound
 {
-    public void Play(AudioClip clip)
+    public class SoundManager : MonoBehaviour
     {
-        var setSound = SetSound();
-        if (setSound != null)
+        public void Play(AudioClip clip)
         {
-            setSound.PlaySound(clip);
+            var setSound = SetSound();
+            if (setSound != null)
+            {
+                setSound.PlaySound(clip);
+            }
         }
-    }
 
-    private IUseSound SetSound()
-    {
-        return gameObject.GetComponent<IUseSound>();
+        private IUseSound SetSound()
+        {
+            return gameObject.GetComponent<IUseSound>();
+        }
     }
 }

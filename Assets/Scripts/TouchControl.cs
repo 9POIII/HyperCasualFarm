@@ -6,43 +6,40 @@ using UnityEngine;
 public class TouchControl : MonoBehaviour
 {
     private bool canMove = true;
+    private IUseHinge interactable;
+    [SerializeField] private GameState gameState;
+    
+    private void Start()
+    {
+        interactable = SetInteractable();
+    }
 
     private void Update()
     {
-        if (Input.touchCount > 0 && canMove && Input.touches[0].phase == TouchPhase.Began)
+        if (interactable != null && gameState.CanPlay)
         {
-            var interactable = SetInteractable();
-            if (interactable != null)
+            if (Input.touchCount > 0 && canMove && Input.touches[0].phase == TouchPhase.Began)
             {
                 interactable.ActivateMotor();
                 canMove = false;
             }
-        }
-        else if (Input.touchCount <= 0 && canMove == false)
-        {
-            var interactable = SetInteractable();
-            if (interactable != null)
+            else if (Input.touchCount <= 0 && canMove == false)
             {
                 interactable.DisactivateMotor();
                 canMove = true;
             }
         }
-        
+
 #if UNITY_EDITOR
-        
-        if (Input.GetMouseButtonDown(0))
+
+        if (interactable != null && gameState.CanPlay)
         {
-            var interactable = SetInteractable();
-            if (interactable != null)
+            if (Input.GetMouseButtonDown(0))
             {
                 interactable.ActivateMotor();
             }
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            var interactable = SetInteractable();
-            if (interactable != null)
-            {
+            else if (Input.GetMouseButtonUp(0))
+            { 
                 interactable.DisactivateMotor();
             }
         }
