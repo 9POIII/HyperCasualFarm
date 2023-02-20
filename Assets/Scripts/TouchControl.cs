@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class TouchControl : MonoBehaviour
 {
-    [SerializeField] private GameObject jumpers;
     private bool canMove = true;
 
     private void Update()
@@ -52,6 +51,6 @@ public class TouchControl : MonoBehaviour
 
     private IUseHinge SetInteractable()
     {
-        return jumpers.GetComponent<IUseHinge>();
+        return gameObject.GetComponent<IUseHinge>();
     }
 }

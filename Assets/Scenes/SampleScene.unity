@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 26718437}
   m_Layer: 0
   m_Name: FiftikL
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 113059609}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 487038047}
   m_Layer: 0
   m_Name: WallDownL
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 546032770}
   m_Layer: 0
   m_Name: FiftikR
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 719212775}
   m_Layer: 0
   m_Name: WallRight
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 778381534}
   m_Layer: 0
   m_Name: Jumpers
-  m_TagString: Player
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -882,7 +882,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c803935d88a61774ba54a219676fc535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpers: {fileID: 778381531}
 --- !u!1 &945239825
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +895,7 @@ GameObject:
   - component: {fileID: 945239826}
   m_Layer: 0
   m_Name: WallUp
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -994,6 +993,64 @@ Transform:
   m_Father: {fileID: 113059609}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1120680627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120680630}
+  - component: {fileID: 1120680629}
+  - component: {fileID: 1120680628}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1120680628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120680627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249157f07dedcaa46ae8b79e07ac6afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 0.2
+--- !u!114 &1120680629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120680627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7786d6a090345e1479c4fe41b51198c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1120680630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120680627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.88069886, y: -0.35566175, z: 0.024004769}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1142516126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1064,7 @@ GameObject:
   - component: {fileID: 1142516128}
   m_Layer: 0
   m_Name: WallDownR
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1118,7 +1175,7 @@ GameObject:
   - component: {fileID: 1526825654}
   m_Layer: 0
   m_Name: WallLeft
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1228,9 +1285,10 @@ GameObject:
   - component: {fileID: 1729570985}
   - component: {fileID: 1729570984}
   - component: {fileID: 1729570987}
+  - component: {fileID: 1729570988}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1316,7 +1374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729570983}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.82, y: 2, z: 0}
+  m_LocalPosition: {x: 0.47, y: 2, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1339,3 +1397,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1729570988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729570983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecadf212b3d3a2c44bc6ab14dfa55fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballTouchSound: {fileID: 8300000, guid: 5c2050719227ac344b09effc1fbf3cb2, type: 3}
+  soundManager: {fileID: 1120680629}
