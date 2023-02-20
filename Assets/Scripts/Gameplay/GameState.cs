@@ -16,13 +16,14 @@ public class GameState : MonoBehaviour
 
     private void Start()
     {
-        canPlay = true;
+        Application.targetFrameRate = Screen.currentResolution.refreshRate < 120 ? 60 : 120;
+        CanPlay = true;
     }
 
     public void LoseGame()
     {
         if (Camera.main != null) Camera.main.gameObject.transform.DOShakePosition(0.5f, 0.5f);
-        canPlay = false;
+        CanPlay = false;
         soundManager.Play(gameOverSound);
     }
 }

@@ -24,7 +24,7 @@ public class CameraConstantWidth : MonoBehaviour
         horizontalFov = CalcVerticalFov(initialFov, 1 / targetAspect);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (componentCamera.orthographic)
         {
