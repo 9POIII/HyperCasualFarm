@@ -7,7 +7,7 @@ public class TouchControl : MonoBehaviour
 {
     [SerializeField] private GameObject jumpers;
     private bool canMove = true;
-    
+
     private void Update()
     {
         if (Input.touchCount > 0 && canMove && Input.touches[0].phase == TouchPhase.Began)
@@ -15,7 +15,7 @@ public class TouchControl : MonoBehaviour
             var interactable = SetInteractable();
             if (interactable != null)
             {
-                interactable.StartMotor();
+                interactable.ActivateMotor();
                 canMove = false;
             }
         }
@@ -24,7 +24,7 @@ public class TouchControl : MonoBehaviour
             var interactable = SetInteractable();
             if (interactable != null)
             {
-                interactable.FinishMotor();
+                interactable.DisactivateMotor();
                 canMove = true;
             }
         }
@@ -36,7 +36,7 @@ public class TouchControl : MonoBehaviour
             var interactable = SetInteractable();
             if (interactable != null)
             {
-                interactable.StartMotor();
+                interactable.ActivateMotor();
             }
         }
         else if (Input.GetMouseButtonUp(0))
@@ -44,7 +44,7 @@ public class TouchControl : MonoBehaviour
             var interactable = SetInteractable();
             if (interactable != null)
             {
-                interactable.FinishMotor();
+                interactable.DisactivateMotor();
             }
         }
 #endif

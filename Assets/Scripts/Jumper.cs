@@ -12,7 +12,7 @@ public class Jumper : MonoBehaviour, IUseHinge
         set => hingeJoint2D = value;
     }
 
-    public void StartMotor()
+    public void ActivateMotor()
     {
         Debug.Log("start");
         for (int i = 0; i < hingeJoint2D.Length; i++)
@@ -21,7 +21,7 @@ public class Jumper : MonoBehaviour, IUseHinge
         }
     }
 
-    public void FinishMotor()
+    public void DisactivateMotor()
     {
         Debug.Log("finish");
         for (int i = 0; i < hingeJoint2D.Length; i++)

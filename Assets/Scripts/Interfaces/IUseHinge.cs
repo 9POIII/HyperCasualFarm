@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IUseHinge
 {
-    void StartMotor();
-    void FinishMotor();
+    void ActivateMotor();
+    void DisactivateMotor();
 }
