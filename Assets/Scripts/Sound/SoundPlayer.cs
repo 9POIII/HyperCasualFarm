@@ -14,12 +14,14 @@ namespace Sound
         }
     
         public void PlaySound(AudioClip clip)
-        {
-            if (canItPlay)
+        {                
+            StartCoroutine(Play(clip));
+
+            /**if (canItPlay)
             {
                 StartCoroutine(Play(clip));
                 canItPlay = false;
-            }
+            }**/
         }
     
         public IEnumerator Play(AudioClip clip)
@@ -33,7 +35,7 @@ namespace Sound
 
             yield return new WaitForSeconds(source.clip.length);
             Destroy(source);
-            canItPlay = true;
+            //canItPlay = true;
         }
     }
 }
