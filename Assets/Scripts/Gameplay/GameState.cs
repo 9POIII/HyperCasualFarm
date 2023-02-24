@@ -7,6 +7,7 @@ public class GameState : MonoBehaviour
     [SerializeField] private bool canPlay;
     [SerializeField] private AudioClip gameOverSound;
     [SerializeField] private SoundManager soundManager;
+    [SerializeField] private GameObject losePanel;
 
     public bool CanPlay
     {
@@ -18,6 +19,7 @@ public class GameState : MonoBehaviour
     {
         Application.targetFrameRate = Screen.currentResolution.refreshRate < 120 ? 60 : 120;
         CanPlay = true;
+        losePanel.SetActive(false);
     }
 
     public void LoseGame()
@@ -25,5 +27,6 @@ public class GameState : MonoBehaviour
         if (Camera.main != null) Camera.main.gameObject.transform.DOShakePosition(0.5f, 0.5f);
         CanPlay = false;
         soundManager.Play(gameOverSound);
+        losePanel.SetActive(true);
     }
 }

@@ -23,8 +23,8 @@ namespace Sound
                 canItPlay = false;
             }**/
         }
-    
-        public IEnumerator Play(AudioClip clip)
+
+        private IEnumerator Play(AudioClip clip)
         {
             AudioSource source = Camera.main.AddComponent<AudioSource>();
 
