@@ -1,3 +1,4 @@
+using Ads;
 using DG.Tweening;
 using Sound;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class GameState : MonoBehaviour
     [SerializeField] private AudioClip gameOverSound;
     [SerializeField] private SoundManager soundManager;
     [SerializeField] private GameObject losePanel;
+    [SerializeField] private InterstitialAds interstitialAds;
 
     public bool CanPlay
     {
@@ -28,5 +30,6 @@ public class GameState : MonoBehaviour
         CanPlay = false;
         soundManager.Play(gameOverSound);
         losePanel.SetActive(true);
+        interstitialAds.ShowAd();
     }
 }
