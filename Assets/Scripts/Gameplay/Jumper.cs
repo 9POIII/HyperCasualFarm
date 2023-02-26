@@ -7,6 +7,7 @@ namespace Gameplay
         [SerializeField] private int pointsToAdd;
         [SerializeField] private GameObject scoreChanger;
         [SerializeField] private Color colorToPaint;
+        [SerializeField] private float animDuration;
         public int PointsToAdd
         {
             get => pointsToAdd;
@@ -16,12 +17,12 @@ namespace Gameplay
         private void OnCollisionEnter2D(Collision2D collision)
         {
             var iscoreController = IScoreController();
-            var icolorAnimation = IcolorAnimation();
+            var icolorAnimation = IColorAnimation();
 
             if (collision.gameObject.CompareTag("Player"))
             {
                 iscoreController.AddScore(PointsToAdd);
-                icolorAnimation.ColorAnimation(colorToPaint, gameObject);
+                icolorAnimation.ColorAnimation(colorToPaint, gameObject, animDuration);
             }
         }
     
@@ -30,7 +31,7 @@ namespace Gameplay
             return scoreChanger.GetComponent<IScoreController>();
         }
 
-        private IColorAnimation IcolorAnimation()
+        private IColorAnimation IColorAnimation()
         {
             return gameObject.GetComponent<IColorAnimation>();
         }

@@ -388,7 +388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &238384251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -778,7 +778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &485076946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1129,6 +1129,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!114 &494619511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1560,6 +1561,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!114 &554208417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2843,6 +2845,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!50 &1278089512
 Rigidbody2D:
   serializedVersion: 4
@@ -2995,8 +2998,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 134217727
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.02745098}
+    rgba: 654311423
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.14901961}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3279,6 +3282,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!114 &1294962531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3431,6 +3435,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!114 &1328302570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3722,6 +3727,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!50 &1450465376
 Rigidbody2D:
   serializedVersion: 4
@@ -4296,6 +4302,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!50 &1617141601
 Rigidbody2D:
   serializedVersion: 4
@@ -5150,6 +5157,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!114 &1856478417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5700,6 +5708,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!114 &1947169131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5905,6 +5914,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!114 &2006004586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6211,6 +6221,7 @@ MonoBehaviour:
   pointsToAdd: 125
   scoreChanger: {fileID: 1376285468}
   colorToPaint: {r: 1, g: 0.5019608, b: 0, a: 1}
+  animDuration: 0.3
 --- !u!114 &2100780184
 MonoBehaviour:
   m_ObjectHideFlags: 0

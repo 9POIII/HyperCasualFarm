@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IColorAnimation
 {
-    void ColorAnimation(Color color, GameObject objToPaint);
+    void ColorAnimation(Color color, GameObject objToPaint, float duration);
 }

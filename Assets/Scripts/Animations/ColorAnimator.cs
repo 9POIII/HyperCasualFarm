@@ -14,16 +14,16 @@ namespace Animations
             oldColor = gameObject.GetComponent<SpriteRenderer>().color;
         }
 
-        public void ColorAnimation(Color color, GameObject objToPaint)
+        public void ColorAnimation(Color color, GameObject objToPaint, float duration)
         {
-            objToPaint.GetComponent<SpriteRenderer>().DOColor(color, .5f).From(oldColor);
-            StartCoroutine(ColorChange(objToPaint));
+            objToPaint.GetComponent<SpriteRenderer>().DOColor(color, duration);
+            StartCoroutine(ColorChange(objToPaint, duration));
         }
 
-        private IEnumerator ColorChange(GameObject objToPaint)
+        private IEnumerator ColorChange(GameObject objToPaint, float duration)
         {
             yield return new WaitForSeconds(0.1f);
-            objToPaint.GetComponent<SpriteRenderer>().DOColor(oldColor, .5f).From(objToPaint.GetComponent<SpriteRenderer>().color);
+            objToPaint.GetComponent<SpriteRenderer>().DOColor(oldColor, duration);
         }
     }
 }
