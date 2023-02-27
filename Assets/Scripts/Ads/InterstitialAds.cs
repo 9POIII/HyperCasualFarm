@@ -21,13 +21,13 @@ namespace Ads
 
         public void LoadAd()
         {
-            Debug.Log("Loading Ad: " + adID);
+            //Debug.Log("Loading Ad: " + adID);
             Advertisement.Load(adID, this);
         }
 
         public void ShowAd()
         {
-            Debug.Log("Showing Ad: " + adID);
+            //Debug.Log("Showing Ad: " + adID);
             Advertisement.Show(adID, this);
         }
 

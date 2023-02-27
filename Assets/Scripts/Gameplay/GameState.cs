@@ -1,5 +1,7 @@
 using Ads;
 using DG.Tweening;
+using Gameplay;
+using Saves;
 using Sound;
 using UnityEngine;
 
@@ -10,6 +12,7 @@ public class GameState : MonoBehaviour
     [SerializeField] private SoundManager soundManager;
     [SerializeField] private GameObject losePanel;
     [SerializeField] private InterstitialAds interstitialAds;
+    [SerializeField] private ScoreChanger scoreChanger;
 
     public bool CanPlay
     {
@@ -31,5 +34,6 @@ public class GameState : MonoBehaviour
         soundManager.Play(gameOverSound);
         losePanel.SetActive(true);
         interstitialAds.ShowAd();
+        scoreChanger.SaveScore();
     }
 }
