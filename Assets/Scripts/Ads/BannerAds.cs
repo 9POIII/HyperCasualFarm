@@ -23,12 +23,34 @@ namespace Ads
         private void Start()
         {
             Advertisement.Banner.SetPosition(bannerPosition);
-            StartCoroutine(LoadAdBanner());
+            //LoadBanner();
+            BannerLoadOptions options = new BannerLoadOptions
+            {
+                loadCallback = OnBannerLoaded,
+                errorCallback = OnBannerError
+            };
+
+            Advertisement.Banner.Load(adId, options);
+
+            StartCoroutine(ShowBannerWhenInitialized());
         }
-        private IEnumerator LoadAdBanner()
+
+        IEnumerator ShowBannerWhenInitialized()
         {
-            yield return new WaitForSeconds(1f);
-            LoadBanner();
+            BannerOptions options = new BannerOptions
+            {
+                clickCallback = OnBannerClicked,
+                hideCallback = OnBannerHidden,
+                showCallback = OnBannerShown
+            };
+            
+            while (!Advertisement.isInitialized)
+            {
+                yield return new WaitForSeconds(.5f);
+                Debug.Log("banner loh");
+            }
+            Advertisement.Banner.Show(adId, options);
+            Debug.Log("banner rabotaet");
         }
 
         public void LoadBanner()
@@ -44,13 +66,13 @@ namespace Ads
 
         private void OnBannerLoaded()
         {
-            //Debug.Log("Banner loaded");
+            Debug.Log("Banner loaded");
             ShowBannerAd();
         }
 
         private void OnBannerError(string message)
         {
-            //Debug.Log($"Banner Error: {message}");
+            Debug.Log($"Banner Error: {message}");
         }
         public void ShowBannerAd()
         {

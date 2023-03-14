@@ -1,8 +1,6 @@
-using System;
 using Saves;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Gameplay
 {
@@ -33,9 +31,9 @@ namespace Gameplay
 
         public void AddScore(int numToAdd)
         {
+            CurrentScore += numToAdd;
             if (CurrentScore <= BestScore)
             {
-                CurrentScore += numToAdd;
                 currentScoreText.text = CurrentScore.ToString();
             }
             else

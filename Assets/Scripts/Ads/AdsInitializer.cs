@@ -8,7 +8,7 @@ namespace Ads
 
         [SerializeField] string androidGameID = "4488585";
         [SerializeField] string iOSGameID = "4488584";
-        [SerializeField] bool testMode = true;
+        [SerializeField] bool testMode = false;
         private string gameID;
 
         void Awake()

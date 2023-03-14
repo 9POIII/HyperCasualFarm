@@ -15,13 +15,13 @@ namespace Sound
     
         public void PlaySound(AudioClip clip)
         {                
-            StartCoroutine(Play(clip));
+            //StartCoroutine(Play(clip));
 
-            /**if (canItPlay)
+            if (canItPlay)
             {
                 StartCoroutine(Play(clip));
                 canItPlay = false;
-            }**/
+            }
         }
 
         private IEnumerator Play(AudioClip clip)
@@ -32,10 +32,11 @@ namespace Sound
             source.volume = Volume;
             source.spatialBlend = 0f;
             source.Play();
-
+            
+            yield return new WaitForSeconds(.03f);
+            canItPlay = true;
             yield return new WaitForSeconds(source.clip.length);
             Destroy(source);
-            //canItPlay = true;
         }
     }
 }
